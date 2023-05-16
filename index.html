@@ -135,7 +135,8 @@
 			    gl_FragColor = vec4( col, 0.8 * light );
 			}
 		</script>
-		
+		<script src="./sdk/config.js"></script>
+		<script src="./sdk/sdk.js"></script>
     </head>
     <body>
     	<header>
@@ -197,6 +198,16 @@
 		<script src="js/header.js"></script>
 		<script src="js/util.js"></script>
 		<script src="js/coil.js"></script>
+		<script>
+			const client = new GameClient(gameId, apiKey, window.parent)
+			client
+			.initAsync()
+			.then(() => {
+			
+			})
+			.catch((err) => console.log(err));
+			
+		  </script>
 		
 		<script type="text/javascript">
 		/* <![CDATA[ */
